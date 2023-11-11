@@ -24,8 +24,17 @@ ol.pokemons li {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: #14A06F;
     color: #fff;
+}
+
+ol.pokemons li.bulbasaur {
+    background-color: #14A06F;
+}
+
+
+ol.types {
+   
+    padding: 0;
 }
 
 ol.pokemons img {
