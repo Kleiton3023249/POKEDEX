@@ -1,0 +1,67 @@
+
+ol.pokemons li {
+    margin: 0.5rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    border-radius: 1rem;
+}
+
+ol.pokemons li.poison {
+    background-color: #48D0B0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ol.pokemons li.water {
+    background-color:#72C1F2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+ol.pokemons li div.detail {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+ol.pokemons li div.detail img {
+    max-width: 100%;
+    height: 110px;
+}
+
+ol.pokemons .name {
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+ol.pokemons .number {
+    color: #8b8989;
+    text-align: right;
+    opacity: 0.3;
+    font-size: 26px;
+}
+
+ol.pokemons ol {
+    padding: 0;
+    margin: 19px 0px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+ol.pokemons ol.types li.type {
+    background-color: #f2f2f2ad;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    font-size: 17px;
+    margin: 0.25rem 0;
+    border-radius: 1rem;
+    align-items: center;
+}
+
