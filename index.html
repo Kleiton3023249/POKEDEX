@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;500;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <!--Font icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-wjB08CFhBbSS1lq6FqR4wlu5lL56vZlD+Z5maJ7gCFa3S+76DDCDmZMxWBC5f3F0" crossorigin="anonymous">
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/global.css"/>
     <link rel="stylesheet" href="assets/css/pokemons.css"/>
@@ -24,95 +28,17 @@
     <section class="content">
         <h1>Pokedex</h1>
 
-        <ol class="pokemons">
-            
-            <li class="poison">
-                <span class="number">#0013</span>
-                <span class="name">Weedle</span>
-                <div class="detail">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg" alt="weedle">
-                        
-                    <ol class="types"> 
-                        
-                        <li class="type">bug</li>
-                        <li class="type">poison</li>
-                    </ol>
-                </div>
-
-            </li>
-
-            <li class="poison">
-                <span class="number">#0014</span>
-                <span class="name">Kakuna</span>
-                <div class="detail">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg" alt="Kakuna">
-                    <ol class="types"> 
-                        
-                        <li class="type">bug</li>
-                        <li class="type">poison</li>
-                    </ol>
-                </div>
-            </li>
-
-            <li class="poison">
-                <span class="number">#0015</span>
-                <span class="name">Beedrill</span>
-                <div class="detail">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg" alt="beedrill">
-                    <ol class="types"> 
-                        
-                        <li class="type">bug</li>
-                        <li class="type">poison</li>
-                    </ol>
-                </div>
-            </li>
-
-            <li class="water">
-                <span class="number">#0007</span>
-                <span class="name">Squirtle</span>
-                <div class="detail">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg" alt="squirtle">
-                    <ol class="types"> 
-                        
-                        <li class="type">water</li>
-
-                    </ol>
-                </div>
-            </li>
-
-            <li class="water">
-                <span class="number">#0008</span>
-                <span class="name">Wartortle</span>
-                <div class="detail">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg" alt="wartortle">
-                    <ol class="types"> 
-                        
-                        <li class="type">water</li>
-
-                    </ol>
-                </div>
-            </li>
-
-            <li class="water">
-                <span class="number">#0009</span>
-                <span class="name">Blastoise</span>
-                <div class="detail">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg" alt="blastoise">
-
-                    <ol class="types"> 
-                        
-                        <li class="type">water</li>
-
-                    </ol>
-                </div>
-            </li>
-           
+        <ol id="pokemons">
+            <!--lista passada pelo main.js-->
         </ol>
 
     </section>
 
+
   
     <!-- js -->
+<script src="assets/js/pokeApi.js"></script>
 <script src="assets/js/main.js"></script> 
 </body>
+
 </html>

@@ -10,18 +10,19 @@ section.content {
 }
 
 
-
 section.content h1 {
     margin: 0;
-}
+    font-size: 3.125rem;}
 
 
-ol.pokemons {
+ol#pokemons {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0;
 }
+
+
 
 @media screen and (min-width:992px) {
     section.content {
@@ -33,13 +34,22 @@ ol.pokemons {
 }
 
 @media screen and (min-width:576px) {
-    ol.pokemons {
+    section.content {
+        height: auto;
+        border-radius: 1rem;
+    }
+}
+
+
+@media screen and (min-width:576px) {
+    ol#pokemons {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
+
 @media screen and (min-width:992px) {
-    ol.pokemons {
+    ol#pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

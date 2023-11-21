@@ -1,5 +1,5 @@
 
-ol.pokemons li {
+ol#pokemons li {
     margin: 0.5rem;
     padding: 2rem 1rem;
     display: flex;
@@ -8,54 +8,83 @@ ol.pokemons li {
     border-radius: 1rem;
 }
 
-ol.pokemons li.poison {
-    background-color: #48D0B0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
-ol.pokemons li.water {
-    background-color:#72C1F2;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+.normal {  background-color:#A8A77A;}
 
-ol.pokemons li div.detail {
+
+.fire {background-color:#EE8130;}
+
+
+.water {background-color: #6390F0;}
+
+
+.electric{background-color:#F7D02C;}
+
+.grass{background-color: #7AC74C;}
+
+.ice{background-color: #96D9D6;}
+
+.fighting{background-color: #C22E28;}
+
+.poison{background-color: #A33EA1;}
+
+.ground{background-color:  #E2BF65;}
+
+.flying{background-color: #A98FF3;}
+
+.psychic{background-color: #F95587;}
+
+.bug{background-color: #A6B91A;}
+
+.rock{background-color: #B6A136;}
+
+.ghost{background-color: #735797;}
+
+.dragon{background-color: #6F35FC;}
+
+.dark{background-color: #705746;}
+
+.steel{background-color: #B7B7CE;}
+
+.fairy{background-color:#D685AD ;}
+
+
+ol#pokemons li div.detail {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-left: 10px;
 }
 
-ol.pokemons li div.detail img {
+ol#pokemons li div.detail img {
     max-width: 100%;
-    height: 110px;
+    height: 5.875rem;
 }
 
-ol.pokemons .name {
+ol#pokemons .name {
     margin-bottom: 0;
     color: #fff;
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 22px;
+    text-transform: capitalize;
 }
 
-ol.pokemons .number {
+ol#pokemons .number {
     color: #8b8989;
     text-align: right;
     opacity: 0.3;
     font-size: 26px;
 }
 
-ol.pokemons ol {
+ol#pokemons ol {
     padding: 0;
-    margin: 19px 0px;
+    margin: 1.1875rem 0rem;
     list-style: none;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
 }
 
-ol.pokemons ol.types li.type {
+ol#pokemons ol.types li.type {
     background-color: #f2f2f2ad;
     color: #fff;
     padding: 0.25rem 0.5rem;
