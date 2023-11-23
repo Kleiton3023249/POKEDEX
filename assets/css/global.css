@@ -7,6 +7,7 @@ section.content {
     padding: 1rem;
     height: 100vh;
     background-color: #F6F8FC;
+    position: relative;
 }
 
 
@@ -22,6 +23,27 @@ ol#pokemons {
     padding: 0;
 }
 
+div#button {
+    position: absolute;
+    display: flex;
+    /*margin-left: 879px;*/
+    bottom: 33px;
+}
+
+#button button:hover {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);}
+
+#loadMore {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-style: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #efe8f8, #c9c3d1);
+    box-shadow:  22px 22px 100px #88848e,
+             -22px -22px 100px #ffffff;    
+}
+
 
 
 @media screen and (min-width:992px) {
@@ -30,6 +52,7 @@ ol#pokemons {
         margin: 1rem auto;
         height: auto;
         border-radius: 1rem;
+        position: relative;
     }
 }
 
