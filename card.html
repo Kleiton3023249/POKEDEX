@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>Document</title>
 
-    <!-- Normalize css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font Robot -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;500;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/global.css"/>
-    <link rel="stylesheet" href="assets/css/pokemons.css"/>
 
 </head>
 
-<body>
+<body id="bodyCard">
+    
+        <section id="contentCard">
+            
+            <div class="card">
+                <div id="firstCard">
+                    <h1>Bulbassaur</h1>
+                    <img src="assets/img/bulbasaur-seeklogo.com.svg" alt="bulbasaur">
+                    <ol>
+                        <li>grass</li>
+                        <li>posion</li>
+                    </ol>
+                </div>
 
-    <section class="content">
-        <h1>Pokedex</h1>
+                <div id="secondCard">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
 
-        <input type="text" name="searchPokemon" id="searchPokemon" placeholder="Pesquise aqui...">
-        <button id="search">Pesquisar</button>
+            <div class="card">
+                <div>
+                    lala
+                </div>
+            </div>
+        </section>
 
-
-        <ol id="pokemons">
-            <!--lista passada pelo main.js-->
-        </ol>
-
-        <div id="button">
-            <button  id="loadLess"><img src="assets/img/icons8-arrows-24.png" alt="buttonLess"></button>
-
-            <button  id="loadMore"><img src="assets/img/icons8-arrows-24.png" alt="buttonPLus"></button>
-        </div>
-
-    </section>
-
-
-  
-    <!-- js -->
 <script src="assets/js/pokeApi.js"></script>
 <script src="assets/js/main.js"></script> 
 </body>

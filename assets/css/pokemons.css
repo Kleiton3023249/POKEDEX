@@ -5,25 +5,19 @@ ol#pokemons li {
     display: flex;
     flex-direction: column;
     color: #fff;
-    /*border-radius: 1rem;*/
     border-radius: 44px;
-    box-shadow:  5px 5px 10px #666666,
-             -5px -5px 10px #ffffff;
 }
 
 
 .normal {  background-color:#A8A77A;}
 
+.fire {background-color:#e47c2d;}
 
-.fire {background-color:#EE8130;}
-
-
-.water {background-color: #6390F0;}
-
+.water {background-color: #7dbbe4;}
 
 .electric{background-color:#F7D02C;}
 
-.grass{background-color: #7AC74C;}
+.grass{background-color: #79b855fb;}
 
 .ice{background-color: #96D9D6;}
 
@@ -57,6 +51,7 @@ ol#pokemons li div.detail {
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-left: 10px;
+    z-index: 1;
 }
 
 ol#pokemons li div.detail img {

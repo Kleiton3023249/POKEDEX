@@ -38,3 +38,12 @@ pokeApi.getPokemons = (offset=0,limit=10) =>
     .then((pokemonDetail) => pokemonDetail)
     .catch((error) => console.error(error.message))
 }
+
+//para usar na barra de pesquisa:
+pokeApi.searchPokemon = () => {
+    const url = 'https://pokeapi.co/api/v2/pokemon'
+    return fetch(url)
+    .then((response) => response.json())
+    .then((responseBody) => responseBody.results)
+    .then((resultsUrl) => pokeApi.getDetail(resultsUrl.url))
+}
