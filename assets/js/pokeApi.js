@@ -1,3 +1,4 @@
+
 class Pokemon {
     number
     name
@@ -39,11 +40,17 @@ pokeApi.getPokemons = (offset=0,limit=10) =>
     .catch((error) => console.error(error.message))
 }
 
-//para usar na barra de pesquisa:
-pokeApi.searchPokemon = () => {
-    const url = 'https://pokeapi.co/api/v2/pokemon'
-    return fetch(url)
-    .then((response) => response.json())
-    .then((responseBody) => responseBody.results)
-    .then((resultsUrl) => pokeApi.getDetail(resultsUrl.url))
+
+pokeApi.getSpecifPokemon = async (requestPage) => 
+{
+    const getSpecifDetails = await fetch(`https://pokeapi.co/api/v2/pokemon/${requestPage}`)
+
+    if (getSpecifDetails.ok)
+    {const responsejson = await getSpecifDetails.json()
+    const convert = await  pokeApi.convertPokeApiToPokemon(responsejson)
+    return convert
+    }
+    else {
+        throw new Error (`erro na requisição ${getSpecifDetails.status}`)
+    }
 }

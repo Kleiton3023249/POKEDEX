@@ -1,7 +1,10 @@
 const pokemonList = document.getElementById('pokemons')
 const load = document.getElementById('loadMore')
 const less = document.getElementById('loadLess')
-let search = document.getElementById('searchPokemon').value
+let requestPage = document.querySelector('#searchPokemon')
+const search = document.getElementById('giveMeAnswer')
+const section = document.querySelector('.content')
+const largePage = window.innerWidth
 let limit = 10
 let offset = 0
 const maxFatch = 135
@@ -11,6 +14,7 @@ function loadMorePokemons (offset,limit)
     {pokeApi.getPokemons(offset,limit).then((pokemons) => {
     const newList = pokemons.map((pokemon) =>  
         {return `<li class="${pokemon.types[0]}">
+        <img id="backCircle"src="assets/img/circulo.svg" alt="circle">
         <span class="number">${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
         <div class="detail">
@@ -25,6 +29,7 @@ function loadMorePokemons (offset,limit)
     })}
 
 loadMorePokemons()
+
 less.style.display = 'none'
 
 load.addEventListener('click', () => 
@@ -44,8 +49,9 @@ load.addEventListener('click', () =>
 function loadLessPokemons (offset,limit)
 {
     pokeApi.getPokemons(offset,limit).then((pokemons) => {
-    const newList = pokemons.map((pokemon) =>  
+    const backPage = pokemons.map((pokemon) =>  
         {return `<li class="${pokemon.types[0]}">
+        <img id="backCircle"src="assets/img/circulo.svg" alt="circle">
         <span class="number">${pokemon.number}</span>
         <span class="name">${pokemon.name}</span>
         <div class="detail">
@@ -56,7 +62,7 @@ function loadLessPokemons (offset,limit)
             </ol>
         </div>
         </li>`}).join('')
-    pokemonList.innerHTML = newList
+    pokemonList.innerHTML = backPage
     })}
 
 less.addEventListener('click', () => {
@@ -76,22 +82,43 @@ less.addEventListener('click', () => {
     }
 })
 
-/*function searchItem (value) {
-    pokeApi.searchPokemon().then((pokemons) =>
+
+function searchPokemon (requestPage) 
+   { pokeApi.getSpecifPokemon(requestPage)
+    .then ((pokemon) => 
+        {if (pokemon.number <= 135) {
+            const gotPage =`<li class="${pokemon.types[0]}">
+            <img id="backCircle"src="assets/img/circulo.svg" alt="circle">
+            <span class="number">${pokemon.number}</span>
+            <span class="name">${pokemon.name}</span>
+            <div class="detail">
+                    <img src=${pokemon.photo} alt=${pokemon.name}>
+                    
+                <ol class="types"> 
+                ${pokemon.types.map((typeName) => `<li class="type">${typeName}</li>`).join('')}
+                </ol>
+            </div>
+            </li>`
+
+            return pokemonList.innerHTML = gotPage
+        }
+        else { const unreachable = 'Desculpe, essa Pokedex contém apenas Pokemons da primeira geração.'
+            return pokemonList.innerHTML = unreachable
+        }
+        })
+   }
+
+search.addEventListener('click', () => {
+    
+    let input = requestPage.value.toLowerCase()
+    if (input !== '')
     {
-    value = search
-    const result = pokemons.map((value) => {
-        return `<li class="${value.types[0]}">
-        <span class="number">${value.number}</span>
-        <span class="name">${value.name}</span>
-        <div class="detail">
-                <img src=${value.photo} alt=${value.name}>
-                
-            <ol class="types"> 
-            ${value.types.map((typeName) => `<li class="type">${typeName}</li>`).join('')}
-            </ol>
-        </div>
-        </li>`}).join('')
-    })
-    } */
+        if (largePage <= 499) {
+            section.style.margin = '1rem'
+        }
+        load.style.display = 'none'
+    return searchPokemon(input)}
+})
+            
+
     
