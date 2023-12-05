@@ -99,12 +99,10 @@ function searchPokemon (requestPage)
                 </ol>
             </div>
             </li>`
-
             return pokemonList.innerHTML = gotPage
         }
         else { const unreachable = 'Desculpe, essa Pokedex contém apenas Pokemons da primeira geração.'
-            return pokemonList.innerHTML = unreachable
-        }
+            return pokemonList.innerHTML = unreachable}
         })
    }
 
@@ -114,10 +112,11 @@ search.addEventListener('click', () => {
     if (input !== '')
     {
         if (largePage <= 499) {
-            section.style.margin = '1rem'
+            section.style.margin = '1rem 1rem'
         }
         load.style.display = 'none'
-    return searchPokemon(input)}
+    return searchPokemon(input)
+    }
 })
             
 
