@@ -62,14 +62,46 @@
         max-width: 100%;
         border-radius: 2rem;
         background-color: #bebb23;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        justify-items: center;
     }
     
-    #secondCard div {
-        height: 100px;
-        width: 100px;
-        background-color: #a18cd1;
+    #secondCard #button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2rem;
+        }
+
+    #button button {
+        background: none;
+        border: none;
+        cursor: pointer;
     }
+
+    #secondCard #about ol {
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        list-style: none;
+    }
+
+    #secondCard .baseStats ol {
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        list-style: none;
+    }
+
+    #secondCard .evolution ol {
+        display: flex;
+        justify-content: center;
+        background-color: #a18cd1;
+        width: 8.125rem;
+        height: 8.125rem;
+    }
+
+
+
+
+
+
+
